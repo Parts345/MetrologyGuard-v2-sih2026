@@ -1,0 +1,30 @@
+services:
+  ml-service:
+    build:
+      context: ./services/ml-service
+    environment:
+      ML_USE_GPU: ${ML_USE_GPU:-}
+  api:
+    build:
+      context: .
+      dockerfile: docker/api.Dockerfile
+    environment:
+      NODE_ENV: production
+      API_PORT: 4000
+      WEB_ORIGIN: ${WEB_ORIGIN:-http://localhost:8080}
+      DATABASE_PATH: /app/storage/metrologyguard.db
+      ML_SERVICE_URL: http://ml-service:8000
+      STORAGE_PATH: /app/storage
+    volumes:
+      - ./storage:/app/storage
+    depends_on:
+      ml-service:
+        condition: service_started
+  web:
+    build:
+      context: .
+      dockerfile: docker/web.Dockerfile
+      args:
+        VITE_API_URL: /api
+    ports: ["8080:80"]
+    depends_on: [api]

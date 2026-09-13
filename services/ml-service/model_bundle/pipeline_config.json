@@ -1,0 +1,7 @@
+{
+  "name": "legal-metrology-auditor",
+  "version": "1.0.0",
+  "engine": "RapidOCR-ONNX",
+  "execution_provider": "CUDAExecutionProvider",
+  "rules": "Rule_6_Legal_Metrology_2011"
+}

@@ -1,0 +1,33 @@
+# Environment & Virtual Environments
+.env
+.venv/
+env/
+venv/
+
+# Node / Frontend Build
+node_modules/
+dist/
+
+# Python Cache & Databases
+__pycache__/
+*.pyc
+.pytest_cache/
+*.db
+
+# Model Weights & Archives
+*.onnx
+*.zip
+*.pt
+
+# Uploads & Reports Storage (keeps directory structure)
+storage/uploads/*
+!storage/uploads/.gitkeep
+storage/reports/*
+!storage/reports/.gitkeep
+
+# Dataset & Inspection Images
+data/images/
+data/inspections/
+*.jpg
+*.png
+*.jpeg
