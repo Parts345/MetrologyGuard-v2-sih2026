@@ -40,6 +40,7 @@ cd /app
 
 NODE_ENV=development \
 API_PORT=4000 \
+HOST=0.0.0.0 \
 WEB_ORIGIN=http://localhost:7860 \
 ML_SERVICE_URL=http://127.0.0.1:8000 \
 DATABASE_PATH=/app/storage/metrologyguard.db \
