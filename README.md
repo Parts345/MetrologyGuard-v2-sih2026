@@ -28,24 +28,24 @@ Further detail is in [docs](docs/architecture.md), including the [test guide](do
 
 
 
-Terminal 1: ML Service (FastAPI / RapidOCR)
 
 
+
+
+
+
+
+run cmd
+
+ML:
 cd ~/Documents/Legal_metrology_sih/services/ml-service
 source venv/bin/activate
 uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 
-
-Terminal 2: Orchestration API (Node.js / Express)
-
-
+API:
 cd ~/Documents/Legal_metrology_sih
 npm run dev --workspace=@metrologyguard/api
 
-
-
-Terminal 3: Web Frontend (React / Vite)
-
-
+WEB:
 cd ~/Documents/Legal_metrology_sih
 npm run dev --workspace=@metrologyguard/web
