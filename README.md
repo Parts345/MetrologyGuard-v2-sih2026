@@ -9,7 +9,7 @@ MetrologyGuard is an enterprise-oriented Legal Metrology Packaged Commodities Co
 - Internal FastAPI service wrapping the supplied `LegalMetrologyModel` without replacing its inference or declaration logic.
 - PDF and editable DOCX compliance reports with automated evidence, manual review, model/rule versions, and traceability data.
 
-## Quick start
+## Quick start 
 
 1. Install Node.js 22 or later, then copy `.env.example` to `.env` and review the storage and service URLs.
 2. Install Node dependencies: `npm ci`.
